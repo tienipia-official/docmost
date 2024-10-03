@@ -12,7 +12,7 @@ import {
 import { useToggleSidebar } from "@/components/layouts/global/hooks/hooks/use-toggle-sidebar.ts";
 import SidebarToggle from "@/components/ui/sidebar-toggle-button.tsx";
 
-const links = [{ link: APP_ROUTE.HOME, label: "Home" }];
+const links = [{ link: APP_ROUTE.HOME, label: "스페이스 홈" }];
 
 export function AppHeader() {
   const [mobileOpened] = useAtom(mobileSidebarAtom);

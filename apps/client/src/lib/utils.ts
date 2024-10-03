@@ -1,8 +1,8 @@
 export function formatMemberCount(memberCount: number): string {
   if (memberCount === 1) {
-    return "1 member";
+    return "멤버 1 명";
   } else {
-    return `${memberCount} members`;
+    return `멤버 ${memberCount}명`;
   }
 }
 
@@ -28,7 +28,7 @@ export const computeSpaceSlug = (name: string) => {
 
 export const formatBytes = (
   bytes: number,
-  decimalPlaces: number = 2,
+  decimalPlaces: number = 2
 ): string => {
   if (bytes === 0) return "0.0 KB";
 
@@ -47,16 +47,16 @@ export const formatBytes = (
 
 export async function svgStringToFile(
   svgString: string,
-  fileName: string,
+  fileName: string
 ): Promise<File> {
   const blob = new Blob([svgString], { type: "image/svg+xml" });
   return new File([blob], fileName, { type: "image/svg+xml" });
 }
 
 export function decodeBase64ToSvgString(base64Data: string): string {
-  const base64Prefix = 'data:image/svg+xml;base64,';
+  const base64Prefix = "data:image/svg+xml;base64,";
   if (base64Data.startsWith(base64Prefix)) {
-      base64Data = base64Data.replace(base64Prefix, '');
+    base64Data = base64Data.replace(base64Prefix, "");
   }
 
   return atob(base64Data);

@@ -106,7 +106,7 @@ function PageActionMenu({ readOnly }: PageActionMenuProps) {
             leftSection={<IconLink size={16} />}
             onClick={handleCopyLink}
           >
-            Copy link
+            주소 복사
           </Menu.Item>
           <Menu.Divider />
 

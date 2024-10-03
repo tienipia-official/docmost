@@ -8,9 +8,9 @@ export default function PageWidthPref() {
   return (
     <Group justify="space-between" wrap="nowrap" gap="xl">
       <div>
-        <Text size="md">Full page width</Text>
+        <Text size="md">전체 페이지 너비</Text>
         <Text size="sm" c="dimmed">
-          Choose your preferred page width.
+          전체 페이지 너비를 사용하거나 사용하지 않습니다.
         </Text>
       </div>
 
@@ -26,7 +26,7 @@ interface PageWidthToggleProps {
 export function PageWidthToggle({ size, label }: PageWidthToggleProps) {
   const [user, setUser] = useAtom(userAtom);
   const [checked, setChecked] = useState(
-    user.settings?.preferences?.fullPageWidth,
+    user.settings?.preferences?.fullPageWidth
   );
 
   const handleChange = async (event: React.ChangeEvent<HTMLInputElement>) => {

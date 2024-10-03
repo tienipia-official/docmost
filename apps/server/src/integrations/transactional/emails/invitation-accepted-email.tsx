@@ -15,10 +15,10 @@ export const InvitationAcceptedEmail = ({
   return (
     <MailBody>
       <Section style={content}>
-        <Text style={paragraph}>Hi there,</Text>
+        <Text style={paragraph}>안녕하세요.</Text>
         <Text style={paragraph}>
-          {invitedUserName} ({invitedUserEmail}) has accepted your invitation,
-          and is now a member of the workspace.
+          {invitedUserName} ({invitedUserEmail}) 님이 워크스페이스 초대를
+          수락하였습니다.
         </Text>
       </Section>
     </MailBody>

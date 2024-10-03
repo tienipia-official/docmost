@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { useDebouncedValue } from '@mantine/hooks';
-import { Avatar, Group, Select, SelectProps, Text } from '@mantine/core';
-import { useGetSpacesQuery } from '@/features/space/queries/space-query.ts';
-import { ISpace } from '../../types/space.types';
+import { useEffect, useState } from "react";
+import { useDebouncedValue } from "@mantine/hooks";
+import { Avatar, Group, Select, SelectProps, Text } from "@mantine/core";
+import { useGetSpacesQuery } from "@/features/space/queries/space-query.ts";
+import { ISpace } from "../../types/space.types";
 
 interface SpaceSelectProps {
   onChange: (value: string) => void;
@@ -10,7 +10,7 @@ interface SpaceSelectProps {
   label?: string;
 }
 
-const renderSelectOption: SelectProps['renderOption'] = ({ option }) => (
+const renderSelectOption: SelectProps["renderOption"] = ({ option }) => (
   <Group gap="sm">
     <Avatar color="initials" variant="filled" name={option.label} size={20} />
     <div>
@@ -20,7 +20,7 @@ const renderSelectOption: SelectProps['renderOption'] = ({ option }) => (
 );
 
 export function SpaceSelect({ onChange, label, value }: SpaceSelectProps) {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
   const [debouncedQuery] = useDebouncedValue(searchValue, 500);
   const { data: spaces, isLoading } = useGetSpacesQuery({
     query: debouncedQuery,
@@ -53,14 +53,14 @@ export function SpaceSelect({ onChange, label, value }: SpaceSelectProps) {
       renderOption={renderSelectOption}
       maxDropdownHeight={300}
       //label={label || 'Select space'}
-      placeholder="Search for spaces"
+      placeholder="스페이스 선택"
       searchable
       searchValue={searchValue}
       onSearchChange={setSearchValue}
       clearable
       variant="filled"
       onChange={onChange}
-      nothingFoundMessage="No space found"
+      nothingFoundMessage="스페이스를 찾을 수 없습니다."
       limit={50}
       checkIconPosition="right"
       comboboxProps={{ width: 300, withinPortal: false }}

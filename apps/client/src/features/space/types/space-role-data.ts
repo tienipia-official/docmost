@@ -2,19 +2,20 @@ import { IRoleData, SpaceRole } from "@/lib/types.ts";
 
 export const spaceRoleData: IRoleData[] = [
   {
-    label: "Full access",
+    label: "전체 권한",
     value: SpaceRole.ADMIN,
-    description: "Has full access to space settings and pages",
+    description: "스페이스의 모든 페이지를 생성하고 편집할 수 있습니다.",
   },
   {
-    label: "Can edit",
+    label: "편집 권한",
     value: SpaceRole.WRITER,
-    description: "Can create and edit pages in space.",
+    description: "스페이스에서 페이지를 생성하고 편집할 수 있습니다.",
   },
   {
-    label: "Can view",
+    // label: "Can view",
+    label: "읽기 전용",
     value: SpaceRole.READER,
-    description: "Can view pages in space but not edit",
+    description: "스페이스의 페이지를 볼 수 있지만 편집할 수는 없습니다.",
   },
 ];
 

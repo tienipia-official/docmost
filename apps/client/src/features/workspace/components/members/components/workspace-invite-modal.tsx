@@ -7,13 +7,13 @@ export default function WorkspaceInviteModal() {
 
   return (
     <>
-      <Button onClick={open}>Invite members</Button>
+      <Button onClick={open}>멤버 초대</Button>
 
       <Modal
         size="550"
         opened={opened}
         onClose={close}
-        title="Invite new members"
+        title="새로운 멤버 초대"
         centered
       >
         <Divider size="xs" mb="xs" />

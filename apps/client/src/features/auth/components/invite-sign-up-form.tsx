@@ -30,7 +30,7 @@ export function InviteSignUpForm() {
   const [searchParams] = useSearchParams();
 
   const { data: invitation, isError } = useGetInvitationQuery(
-    params?.invitationId,
+    params?.invitationId
   );
   const { invitationSignup, isLoading } = useAuth();
   useRedirectIfAuthenticated();
@@ -55,7 +55,7 @@ export function InviteSignUpForm() {
   }
 
   if (isError) {
-    return <div>invalid invitation link</div>;
+    return <div>유효하지 않은 접근입니다.</div>;
   }
 
   if (!invitation) {
@@ -66,7 +66,7 @@ export function InviteSignUpForm() {
     <Container size={420} my={40} className={classes.container}>
       <Box p="xl" mt={200}>
         <Title order={2} ta="center" fw={500} mb="md">
-          Join the workspace
+          워크스페이스 가입
         </Title>
 
         <Stack align="stretch" justify="center" gap="xl">
@@ -74,8 +74,8 @@ export function InviteSignUpForm() {
             <TextInput
               id="name"
               type="text"
-              label="Name"
-              placeholder="enter your full name"
+              label="이름"
+              placeholder="이름을 입력해주세요"
               variant="filled"
               {...form.getInputProps("name")}
             />
@@ -91,14 +91,14 @@ export function InviteSignUpForm() {
             />
 
             <PasswordInput
-              label="Password"
-              placeholder="Your password"
+              label="비밀번호"
+              placeholder="비밀번호를 입력해주세요"
               variant="filled"
               mt="md"
               {...form.getInputProps("password")}
             />
             <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-              Sign Up
+              가입하기
             </Button>
           </form>
         </Stack>

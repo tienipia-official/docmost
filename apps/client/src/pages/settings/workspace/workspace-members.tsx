@@ -41,8 +41,8 @@ export default function WorkspaceMembers() {
           value={segmentValue}
           onChange={handleSegmentChange}
           data={[
-            { label: "Members", value: "members" },
-            { label: "Pending", value: "invites" },
+            { label: "멤버", value: "members" },
+            { label: "대기", value: "invites" },
           ]}
           withItemsBorders={false}
         />

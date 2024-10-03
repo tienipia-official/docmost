@@ -4,7 +4,7 @@ import WorkspaceNameForm from "@/features/workspace/components/settings/componen
 export default function WorkspaceSettings() {
   return (
     <>
-      <SettingsTitle title="General" />
+      <SettingsTitle title="일반" />
       <WorkspaceNameForm />
     </>
   );

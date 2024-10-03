@@ -44,14 +44,14 @@ export default function TopMenu() {
         </UnstyledButton>
       </Menu.Target>
       <Menu.Dropdown>
-        <Menu.Label>Workspace</Menu.Label>
+        <Menu.Label>워크스페이스</Menu.Label>
 
         <Menu.Item
           component={Link}
           to={APP_ROUTE.SETTINGS.WORKSPACE.GENERAL}
           leftSection={<IconSettings size={16} />}
         >
-          Workspace settings
+          워크스페이스 설정
         </Menu.Item>
 
         <Menu.Item
@@ -59,12 +59,12 @@ export default function TopMenu() {
           to={APP_ROUTE.SETTINGS.WORKSPACE.MEMBERS}
           leftSection={<IconUsers size={16} />}
         >
-          Manage members
+          멤버 관리
         </Menu.Item>
 
         <Menu.Divider />
 
-        <Menu.Label>Account</Menu.Label>
+        <Menu.Label>계정</Menu.Label>
         <Menu.Item component={Link} to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}>
           <Group wrap={"nowrap"}>
             <CustomAvatar
@@ -88,7 +88,7 @@ export default function TopMenu() {
           to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}
           leftSection={<IconUserCircle size={16} />}
         >
-          My profile
+          프로필
         </Menu.Item>
 
         <Menu.Item
@@ -96,13 +96,13 @@ export default function TopMenu() {
           to={APP_ROUTE.SETTINGS.ACCOUNT.PREFERENCES}
           leftSection={<IconBrush size={16} />}
         >
-          My preferences
+          환경설정
         </Menu.Item>
 
         <Menu.Divider />
 
         <Menu.Item onClick={logout} leftSection={<IconLogout size={16} />}>
-          Logout
+          로그아웃
         </Menu.Item>
       </Menu.Dropdown>
     </Menu>

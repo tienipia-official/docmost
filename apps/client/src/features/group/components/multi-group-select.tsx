@@ -49,7 +49,7 @@ export function MultiGroupSelect({
       // Filter out existing users by their ids
       const filteredGroupData = groupsData.filter(
         (user) =>
-          !data.find((existingUser) => existingUser.value === user.value),
+          !data.find((existingUser) => existingUser.value === user.value)
       );
 
       // Combine existing data with new search data
@@ -65,7 +65,7 @@ export function MultiGroupSelect({
       maxDropdownHeight={300}
       description={description}
       label={label || "Add groups"}
-      placeholder="Search for groups"
+      placeholder="그룹을 검색하세요"
       mt={mt}
       searchable
       searchValue={searchValue}
@@ -73,7 +73,7 @@ export function MultiGroupSelect({
       clearable
       variant="filled"
       onChange={onChange}
-      nothingFoundMessage="No group found"
+      nothingFoundMessage="그룹을 찾을 수 없습니다."
       maxValues={50}
     />
   );
