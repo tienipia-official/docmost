@@ -17,10 +17,10 @@ export class EnvironmentVariables {
   DATABASE_URL: string;
 
   @IsNotEmpty()
-  @IsUrl(
-    { protocols: ['redis', 'rediss'], require_tld: false },
-    { message: 'REDIS_URL must be a valid redis connection string' },
-  )
+  // @IsUrl(
+  //   { protocols: ['redis', 'rediss'], require_tld: false },
+  //   { message: 'REDIS_URL must be a valid redis connection string' },
+  // )
   REDIS_URL: string;
 
   @IsOptional()
