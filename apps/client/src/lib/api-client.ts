@@ -42,7 +42,7 @@ api.interceptors.response.use(
       switch (error.response.status) {
         case 401:
           // Handle unauthorized error
-          Cookies.remove("authTokens");
+          localStorage.removeItem("authTokens");
           redirectToLogin();
           break;
         case 403:
@@ -56,7 +56,7 @@ api.interceptors.response.use(
               .includes("workspace not found")
           ) {
             console.log("workspace not found");
-            Cookies.remove("authTokens");
+            localStorage.removeItem("authTokens");
 
             if (window.location.pathname != Routes.AUTH.SETUP) {
               window.location.href = Routes.AUTH.SETUP;
