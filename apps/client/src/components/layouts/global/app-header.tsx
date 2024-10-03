@@ -53,17 +53,7 @@ export function AppHeader() {
             </>
           )}
 
-          <Text
-            size="lg"
-            fw={600}
-            style={{ cursor: "pointer", userSelect: "none" }}
-            component={Link}
-            to="/home"
-          >
-            Docmost
-          </Text>
-
-          <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
+          <Group gap={5} className={classes.links} visibleFrom="sm">
             {items}
           </Group>
         </Group>
