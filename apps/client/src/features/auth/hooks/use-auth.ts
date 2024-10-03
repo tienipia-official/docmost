@@ -111,6 +111,23 @@ export default function useAuth() {
   };
 
   const handleIsAuthenticated = async () => {
+    let result = await _handleIsAuthenticated();
+
+    // parse querystring of url
+    // const urlParams = new URLSearchParams(window.location.search);
+    // const accessKey = urlParams.get("accessKey");
+
+    // // check uuid format
+    // if (accessKey && accessKey.length === 36) {
+    //   if (window.parent) {
+    //   }
+    // }
+
+    window.parent.postMessage({ type: "ready" }, "*");
+    return result;
+  };
+
+  const _handleIsAuthenticated = async () => {
     if (!authToken) {
       return false;
     }

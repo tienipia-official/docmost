@@ -9,7 +9,7 @@ import {
   Button,
   PasswordInput,
   Box,
-
+  Text,
   Anchor,
 } from "@mantine/core";
 import classes from "./auth.module.css";
@@ -25,6 +25,10 @@ const formSchema = z.object({
   password: z.string().min(1, { message: "Password is required" }),
 });
 
+// parse querystring of url
+const urlParams = new URLSearchParams(window.location.search);
+const email = urlParams.get("email");
+
 export function LoginForm() {
   const { signIn, isLoading } = useAuth();
   useRedirectIfAuthenticated();
@@ -32,7 +36,7 @@ export function LoginForm() {
   const form = useForm<ILogin>({
     validate: zodResolver(formSchema),
     initialValues: {
-      email: "",
+      email: email ?? "",
       password: "",
     },
   });
@@ -45,39 +49,40 @@ export function LoginForm() {
     <Container size={420} my={40} className={classes.container}>
       <Box p="xl" mt={200}>
         <Title order={2} ta="center" fw={500} mb="md">
-          Login
+          스페이스
         </Title>
-
+        <Text size="sm" my={8}>
+          스페이스는 초대장을 받은 사용자만 이용할 수 있습니다.
+        </Text>{" "}
         <form onSubmit={form.onSubmit(onSubmit)}>
           <TextInput
             id="email"
             type="email"
-            label="Email"
+            label="이메일"
             placeholder="email@example.com"
             variant="filled"
             {...form.getInputProps("email")}
           />
 
           <PasswordInput
-            label="Password"
-            placeholder="Your password"
+            label="비밀번호"
+            placeholder="비밀번호를 입력해주세요."
             variant="filled"
             mt="md"
             {...form.getInputProps("password")}
           />
 
           <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-            Sign In
+            스페이스 입장
           </Button>
         </form>
-
         <Anchor
           to={APP_ROUTE.AUTH.FORGOT_PASSWORD}
           component={Link}
           underline="never"
           size="sm"
         >
-          Forgot your password?
+          패스워드를 잊으셨나요?
         </Anchor>
       </Box>
     </Container>
