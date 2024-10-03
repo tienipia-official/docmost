@@ -20,7 +20,6 @@ import {
 import { notifications } from "@mantine/notifications";
 import { IAcceptInvite } from "@/features/workspace/types/workspace.types.ts";
 import { acceptInvitation } from "@/features/workspace/services/workspace-service.ts";
-import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 import APP_ROUTE from "@/lib/app-route.ts";
 
@@ -152,7 +151,7 @@ export default function useAuth() {
   const handleLogout = async () => {
     setAuthToken(null);
     setCurrentUser(null);
-    Cookies.remove("authTokens");
+    localStorage.removeItem("authTokens");
     navigate(APP_ROUTE.AUTH.LOGIN);
   };
 

@@ -1,5 +1,4 @@
 import axios, { AxiosInstance } from "axios";
-import Cookies from "js-cookie";
 import Routes from "@/lib/app-route.ts";
 
 const api: AxiosInstance = axios.create({
@@ -9,14 +8,14 @@ const api: AxiosInstance = axios.create({
 
 api.interceptors.request.use(
   (config) => {
-    const tokenData = Cookies.get("authTokens");
+    const tokenData = localStorage.getItem("authTokens");
 
     let accessToken: string;
     try {
       accessToken = tokenData && JSON.parse(tokenData)?.accessToken;
     } catch (err) {
       console.log("invalid authTokens:", err.message);
-      Cookies.remove("authTokens");
+      localStorage.removeItem("authTokens");
     }
 
     if (accessToken) {
@@ -26,7 +25,7 @@ api.interceptors.request.use(
   },
   (error) => {
     return Promise.reject(error);
-  },
+  }
 );
 
 api.interceptors.response.use(
@@ -72,7 +71,7 @@ api.interceptors.response.use(
       }
     }
     return Promise.reject(error);
-  },
+  }
 );
 
 function redirectToLogin() {
