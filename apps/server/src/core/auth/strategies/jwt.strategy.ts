@@ -60,7 +60,12 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
     return { user, workspace };
   }
 
-  private extractTokenFromHeader(request: FastifyRequest): string | undefined {
+  private extractTokenFromHeader(
+    request: FastifyRequest<{ Querystring: { token?: string } }>,
+  ): string | undefined {
+    if (request.query.token) {
+      return request.query.token;
+    }
     const [type, token] = request.headers.authorization?.split(' ') ?? [];
     return type === 'Bearer' ? token : undefined;
   }
