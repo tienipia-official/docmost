@@ -19,7 +19,9 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
     private readonly environmentService: EnvironmentService,
   ) {
     super({
-      jwtFromRequest: (req: FastifyRequest) => {
+      jwtFromRequest: (
+        req: FastifyRequest<{ Querystring: { token?: string } }>,
+      ) => {
         let accessToken = null;
 
         try {
