@@ -31,7 +31,7 @@ export default function WorkspaceMembers() {
 
   return (
     <>
-      <SettingsTitle title="Members" />
+      <SettingsTitle title="멤버" />
 
       {/* <WorkspaceInviteSection /> */}
       {/* <Divider my="lg" /> */}

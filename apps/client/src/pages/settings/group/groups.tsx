@@ -9,7 +9,7 @@ export default function Groups() {
 
   return (
     <>
-      <SettingsTitle title="Groups" />
+      <SettingsTitle title="그룹" />
 
       <Group my="md" justify="flex-end">
         {isAdmin && <CreateGroupModal />}

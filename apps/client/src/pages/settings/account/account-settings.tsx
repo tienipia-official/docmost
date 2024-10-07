@@ -8,7 +8,7 @@ import SettingsTitle from "@/components/settings/settings-title.tsx";
 export default function AccountSettings() {
   return (
     <>
-      <SettingsTitle title="My Profile" />
+      <SettingsTitle title="프로필" />
 
       <AccountAvatar />
 

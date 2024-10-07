@@ -6,7 +6,7 @@ import { Divider } from "@mantine/core";
 export default function AccountPreferences() {
   return (
     <>
-      <SettingsTitle title="Preferences" />
+      <SettingsTitle title="환경설정" />
       <AccountTheme />
       <Divider my={"md"} />
       <PageWidthPref />

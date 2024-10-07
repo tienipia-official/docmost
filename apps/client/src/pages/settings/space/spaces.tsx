@@ -9,7 +9,7 @@ export default function Spaces() {
 
   return (
     <>
-      <SettingsTitle title="Spaces" />
+      <SettingsTitle title="스페이스" />
 
       <Group my="md" justify="flex-end">
         {isAdmin && <CreateSpaceModal />}
