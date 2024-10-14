@@ -1,4 +1,4 @@
-import { Group, Text } from "@mantine/core";
+import { Group, Text, Tooltip } from "@mantine/core";
 import classes from "./app-header.module.css";
 import React from "react";
 import TopMenu from "@/components/layouts/global/top-menu.tsx";
@@ -35,25 +35,29 @@ export function AppHeader() {
         <Group wrap="nowrap">
           {!isHomeRoute && (
             <>
-              <SidebarToggle
-                aria-label="sidebar toggle"
-                opened={mobileOpened}
-                onClick={toggleMobile}
-                hiddenFrom="sm"
-                size="sm"
-              />
+              <Tooltip label="Sidebar toggle">
+                <SidebarToggle
+                  aria-label="Sidebar toggle"
+                  opened={mobileOpened}
+                  onClick={toggleMobile}
+                  hiddenFrom="sm"
+                  size="sm"
+                />
+              </Tooltip>
 
-              <SidebarToggle
-                aria-label="sidebar toggle"
-                opened={desktopOpened}
-                onClick={toggleDesktop}
-                visibleFrom="sm"
-                size="sm"
-              />
+              <Tooltip label="Sidebar toggle">
+                <SidebarToggle
+                  aria-label="Sidebar toggle"
+                  opened={desktopOpened}
+                  onClick={toggleDesktop}
+                  visibleFrom="sm"
+                  size="sm"
+                />
+              </Tooltip>
             </>
           )}
 
-          <Group gap={5} className={classes.links} visibleFrom="sm">
+          <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
             {items}
           </Group>
         </Group>

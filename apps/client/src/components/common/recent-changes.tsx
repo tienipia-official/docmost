@@ -4,7 +4,6 @@ import {
   UnstyledButton,
   Badge,
   Table,
-  ScrollArea,
   ActionIcon,
 } from "@mantine/core";
 import { Link } from "react-router-dom";
@@ -18,6 +17,7 @@ import { getSpaceUrl } from "@/lib/config.ts";
 interface Props {
   spaceId?: string;
 }
+
 export default function RecentChanges({ spaceId }: Props) {
   const { data: pages, isLoading, isError } = useRecentChangesQuery(spaceId);
 
@@ -30,7 +30,7 @@ export default function RecentChanges({ spaceId }: Props) {
   }
 
   return pages && pages.items.length > 0 ? (
-    <ScrollArea>
+    <Table.ScrollContainer minWidth={500}>
       <Table highlightOnHover verticalSpacing="sm">
         <Table.Tbody>
           {pages.items.map((page) => (
@@ -67,7 +67,12 @@ export default function RecentChanges({ spaceId }: Props) {
                 </Table.Td>
               )}
               <Table.Td>
-                <Text c="dimmed" size="xs" fw={500}>
+                <Text
+                  c="dimmed"
+                  style={{ whiteSpace: "nowrap" }}
+                  size="xs"
+                  fw={500}
+                >
                   {formattedDate(page.updatedAt)}
                 </Text>
               </Table.Td>
@@ -75,7 +80,7 @@ export default function RecentChanges({ spaceId }: Props) {
           ))}
         </Table.Tbody>
       </Table>
-    </ScrollArea>
+    </Table.ScrollContainer>
   ) : (
     <Text size="md" ta="center">
       작성된 페이지가 없습니다.

@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import WorkspaceInvitesTable from "@/features/workspace/components/members/components/workspace-invites-table.tsx";
 import useUserRole from "@/hooks/use-user-role.tsx";
+import { getAppName } from "@/lib/config.ts";
+import { Helmet } from "react-helmet-async";
 
 export default function WorkspaceMembers() {
   const [segmentValue, setSegmentValue] = useState("members");
@@ -31,6 +33,9 @@ export default function WorkspaceMembers() {
 
   return (
     <>
+      <Helmet>
+        <title>멤버 - {getAppName()}</title>
+      </Helmet>
       <SettingsTitle title="멤버" />
 
       {/* <WorkspaceInviteSection /> */}
