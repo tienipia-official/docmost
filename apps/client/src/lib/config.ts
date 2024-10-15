@@ -53,7 +53,13 @@ export function getSpaceUrl(spaceSlug: string) {
 }
 
 export function getFileUrl(src: string) {
-    return src?.startsWith('/files/') ? getBackendUrl() + src : src;
+    const token = JSON.parse(localStorage.getItem("authTokens")).accessToken;
+
+    const url = src?.startsWith('/files/') ? getBackendUrl() + src : src;
+    const urlObj = new URL(url);
+    urlObj.searchParams.append('token', token);
+    
+    return urlObj.toString();
 }
 
 export function getFileUploadSizeLimit() {
