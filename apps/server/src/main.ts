@@ -60,7 +60,13 @@ async function bootstrap() {
     }),
   );
 
-  app.enableCors();
+  app.enableCors({
+    origin: '*',
+    methods: '*',
+    allowedHeaders: '*',
+    credentials: true,
+    optionsSuccessStatus: 204,
+  });
 
   app.useGlobalInterceptors(new TransformHttpResponseInterceptor());
   app.enableShutdownHooks();
