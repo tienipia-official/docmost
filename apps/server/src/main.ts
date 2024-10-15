@@ -61,11 +61,9 @@ async function bootstrap() {
   );
 
   app.enableCors({
-    origin: '*',
-    methods: '*',
-    allowedHeaders: '*',
+    origin: true,
     credentials: true,
-    optionsSuccessStatus: 204,
+    exposedHeaders: ['Authorization', 'ApiKey'],
   });
 
   app.useGlobalInterceptors(new TransformHttpResponseInterceptor());
