@@ -30,7 +30,7 @@ export default function GlobalAppShell({
 
   return (
     <AppShell
-      header={{ height: 49 }}
+      header={{ height: 51 }}
       navbar={
         !isHomeRoute && {
           width: 300,
