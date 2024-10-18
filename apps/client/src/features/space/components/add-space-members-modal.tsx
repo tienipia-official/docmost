@@ -48,7 +48,7 @@ export default function AddSpaceMembersModal({
 
   return (
     <>
-      <Button onClick={open}>스페이스에 멤버 추가</Button>
+      <Button onClick={open}>스페이스에 구성원 추가</Button>
       <Modal opened={opened} onClose={close} title="Add space members">
         <Divider size="xs" mb="xs" />
 

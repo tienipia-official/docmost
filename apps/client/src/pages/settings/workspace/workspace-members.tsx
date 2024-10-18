@@ -34,9 +34,9 @@ export default function WorkspaceMembers() {
   return (
     <>
       <Helmet>
-        <title>멤버 - {getAppName()}</title>
+        <title>구성원 - {getAppName()}</title>
       </Helmet>
-      <SettingsTitle title="멤버" />
+      <SettingsTitle title="구성원" />
 
       {/* <WorkspaceInviteSection /> */}
       {/* <Divider my="lg" /> */}
@@ -46,7 +46,7 @@ export default function WorkspaceMembers() {
           value={segmentValue}
           onChange={handleSegmentChange}
           data={[
-            { label: "멤버", value: "members" },
+            { label: "구성원", value: "members" },
             { label: "대기", value: "invites" },
           ]}
           withItemsBorders={false}

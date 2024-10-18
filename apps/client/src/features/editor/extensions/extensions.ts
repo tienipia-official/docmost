@@ -95,10 +95,10 @@ export const mainExtensions = [
         return `Heading ${node.attrs.level}`;
       }
       if (node.type.name === "detailsSummary") {
-        return "Toggle title";
+        return "제목 반전";
       }
       if (node.type.name === "paragraph") {
-        return 'Write anything. Enter "/" for commands';
+        return '무엇이든 작성하세요. "/"를 입력하면 명령어를 사용할 수 있습니다.';
       }
     },
     includeChildren: true,

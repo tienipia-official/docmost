@@ -196,11 +196,7 @@ function SpaceMenu({ spaceId, onSpaceSettings }: SpaceMenuProps) {
     <>
       <Menu width={200} shadow="md" withArrow>
         <Menu.Target>
-          <Tooltip
-            label="Import pages & space settings"
-            withArrow
-            position="top"
-          >
+          <Tooltip label="스페이스 설정" withArrow position="top">
             <ActionIcon variant="default" size={18} aria-label="Space menu">
               <IconDots />
             </ActionIcon>
@@ -212,7 +208,7 @@ function SpaceMenu({ spaceId, onSpaceSettings }: SpaceMenuProps) {
             onClick={openImportModal}
             leftSection={<IconArrowDown size={16} />}
           >
-            Import pages
+            외부 자료 불러오기
           </Menu.Item>
 
           <Menu.Divider />

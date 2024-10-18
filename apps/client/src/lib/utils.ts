@@ -1,8 +1,8 @@
 export function formatMemberCount(memberCount: number): string {
   if (memberCount === 1) {
-    return "멤버 1 명";
+    return "구성원 1 명";
   } else {
-    return `멤버 ${memberCount}명`;
+    return `구성원 ${memberCount}명`;
   }
 }
 

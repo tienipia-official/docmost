@@ -49,7 +49,7 @@ const groupedData: DataGroup[] = [
         path: "/settings/workspace",
       },
       {
-        label: "멤버",
+        label: "구성원",
         icon: IconUsers,
         path: "/settings/members",
       },

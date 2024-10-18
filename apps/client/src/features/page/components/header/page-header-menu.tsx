@@ -68,7 +68,7 @@ function PageActionMenu({ readOnly }: PageActionMenuProps) {
       getAppUrl() + buildPageUrl(spaceSlug, page.slugId, page.title);
 
     clipboard.copy(pageUrl);
-    notifications.show({ message: "Link copied" });
+    notifications.show({ message: "링크가 복사되었습니다👍" });
   };
 
   const handlePrint = () => {
@@ -106,13 +106,13 @@ function PageActionMenu({ readOnly }: PageActionMenuProps) {
             leftSection={<IconLink size={16} />}
             onClick={handleCopyLink}
           >
-            주소 복사
+            링크 복사
           </Menu.Item>
           <Menu.Divider />
 
           <Menu.Item leftSection={<IconArrowsHorizontal size={16} />}>
             <Group wrap="nowrap">
-              <PageWidthToggle label="Full width" />
+              <PageWidthToggle label="폭 맞춤" />
             </Group>
           </Menu.Item>
 
@@ -120,7 +120,7 @@ function PageActionMenu({ readOnly }: PageActionMenuProps) {
             leftSection={<IconHistory size={16} />}
             onClick={openHistoryModal}
           >
-            Page history
+            변경 이력
           </Menu.Item>
 
           <Menu.Divider />
@@ -129,14 +129,14 @@ function PageActionMenu({ readOnly }: PageActionMenuProps) {
             leftSection={<IconDownload size={16} />}
             onClick={openExportModal}
           >
-            Export
+            내보내기
           </Menu.Item>
 
           <Menu.Item
             leftSection={<IconPrinter size={16} />}
             onClick={handlePrint}
           >
-            Print PDF
+            PDF로 출력
           </Menu.Item>
 
           {!readOnly && (
@@ -147,7 +147,7 @@ function PageActionMenu({ readOnly }: PageActionMenuProps) {
                 leftSection={<IconTrash size={16} />}
                 onClick={handleDeletePage}
               >
-                Delete
+                삭제
               </Menu.Item>
             </>
           )}

@@ -44,7 +44,7 @@ export function WorkspaceInviteForm({ onClose }: Props) {
 
         <TagsInput
           mt="sm"
-          description="새로운 멤버를 초대할 이메일 주소를 입력하세요. (최대 50개, 쉼표로 구분)"
+          description="새로운 구성원을 초대할 이메일 주소를 입력하세요. (최대 50개, 쉼표로 구분)"
           label="이메일로 초대"
           placeholder="이메일 주소를 입력하세요"
           variant="filled"
@@ -56,7 +56,7 @@ export function WorkspaceInviteForm({ onClose }: Props) {
 
         <Select
           mt="sm"
-          description="초대된 멤버에게 할당할 역할을 선택"
+          description="초대된 구성원에게 할당할 역할을 선택"
           label="역할 선택"
           placeholder="역할 선택"
           variant="filled"
@@ -69,7 +69,7 @@ export function WorkspaceInviteForm({ onClose }: Props) {
 
         <MultiGroupSelect
           mt="sm"
-          description="초대된 멤버는 그룹이 접근할 수 있는 공간에 액세스 권한이 부여됩니다."
+          description="초대된 구성원은 그룹이 접근할 수 있는 공간에 액세스 권한이 부여됩니다."
           label={"그룹에 추가"}
           onChange={handleGroupSelect}
         />

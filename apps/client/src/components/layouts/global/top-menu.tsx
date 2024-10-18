@@ -59,7 +59,7 @@ export default function TopMenu() {
           to={APP_ROUTE.SETTINGS.WORKSPACE.MEMBERS}
           leftSection={<IconUsers size={16} />}
         >
-          멤버 관리
+          구성원 관리
         </Menu.Item>
 
         <Menu.Divider />

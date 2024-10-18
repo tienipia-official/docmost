@@ -405,7 +405,7 @@ function NodeMenu({ node, treeApi }: NodeMenuProps) {
     const pageUrl =
       getAppUrl() + buildPageUrl(spaceSlug, node.data.slugId, node.data.name);
     clipboard.copy(pageUrl);
-    notifications.show({ message: "Link copied" });
+    notifications.show({ message: "링크가 복사되었습니다👍" });
   };
 
   return (
@@ -435,7 +435,7 @@ function NodeMenu({ node, treeApi }: NodeMenuProps) {
             handleCopyLink();
           }}
         >
-          주소 복사
+          링크 복사
         </Menu.Item>
 
         {!(treeApi.props.disableEdit as boolean) && (
@@ -453,7 +453,7 @@ function NodeMenu({ node, treeApi }: NodeMenuProps) {
                 openDeleteModal({ onConfirm: () => treeApi?.delete(node) });
               }}
             >
-              Delete
+              삭제
             </Menu.Item>
           </>
         )}
