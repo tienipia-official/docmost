@@ -35,6 +35,10 @@ export const LinkExtension = TiptapLink.extend({
             const clipboardData = event.clipboardData;
             const pastedUrl = clipboardData?.getData("text/plain");
 
+            if (window.parent) {
+              window.parent.postMessage({ type: "pasted" }, "*");
+            }
+
             if (
               pastedUrl &&
               (pastedUrl.includes("fileName=") ||
@@ -68,10 +72,6 @@ export const LinkExtension = TiptapLink.extend({
                 .run();
 
               return true;
-            }
-
-            if (window.parent) {
-              window.parent.postMessage({ type: "pasted" }, "*");
             }
 
             return false;
