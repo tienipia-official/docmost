@@ -122,7 +122,9 @@ export default function useAuth() {
     //   }
     // }
 
-    window.parent.postMessage({ type: "ready" }, "*");
+    if (window.parent) {
+      window.parent.postMessage({ type: "ready" }, "*");
+    }
     return result;
   };
 
