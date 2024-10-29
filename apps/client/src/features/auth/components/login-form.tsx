@@ -12,6 +12,7 @@ import {
   Text,
   Anchor,
 } from "@mantine/core";
+import { IconSpace } from "@tabler/icons-react";
 import classes from "./auth.module.css";
 import { useRedirectIfAuthenticated } from "@/features/auth/hooks/use-redirect-if-authenticated.ts";
 import { Link, useNavigate } from "react-router-dom";
@@ -49,10 +50,10 @@ export function LoginForm() {
     <Container size={420} my={40} className={classes.container}>
       <Box p="xl" mt={200}>
         <Title order={2} ta="center" fw={500} mb="md">
-          스페이스
+          워크스페이스
         </Title>
         <Text size="sm" my={8}>
-          스페이스는 초대장을 받은 사용자만 이용할 수 있습니다.
+          워크스페이스는 허용된 사용자만 이용할 수 있습니다.
         </Text>{" "}
         <form onSubmit={form.onSubmit(onSubmit)}>
           <TextInput
@@ -73,7 +74,7 @@ export function LoginForm() {
           />
 
           <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-            스페이스 입장
+            워크스페이스 입장
           </Button>
         </form>
         <Anchor

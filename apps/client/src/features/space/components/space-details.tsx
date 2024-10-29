@@ -1,8 +1,8 @@
-import React from 'react';
-import { useSpaceQuery } from '@/features/space/queries/space-query.ts';
-import { EditSpaceForm } from '@/features/space/components/edit-space-form.tsx';
-import { Divider, Group, Text } from '@mantine/core';
-import DeleteSpaceModal from './delete-space-modal';
+import React from "react";
+import { useSpaceQuery } from "@/features/space/queries/space-query.ts";
+import { EditSpaceForm } from "@/features/space/components/edit-space-form.tsx";
+import { Divider, Group, Text } from "@mantine/core";
+import DeleteSpaceModal from "./delete-space-modal";
 
 interface SpaceDetailsProps {
   spaceId: string;
@@ -16,7 +16,7 @@ export default function SpaceDetails({ spaceId, readOnly }: SpaceDetailsProps) {
       {space && (
         <div>
           <Text my="md" fw={600}>
-            Details
+            세부정보
           </Text>
           <EditSpaceForm space={space} readOnly={readOnly} />
 
@@ -26,9 +26,9 @@ export default function SpaceDetails({ spaceId, readOnly }: SpaceDetailsProps) {
 
               <Group justify="space-between" wrap="nowrap" gap="xl">
                 <div>
-                  <Text size="md">Delete space</Text>
+                  <Text size="md">스페이스 삭제</Text>
                   <Text size="sm" c="dimmed">
-                    Delete this space with all its pages and data.
+                    이 스페이스와 모든 페이지 및 데이터를 삭제합니다.
                   </Text>
                 </div>
 

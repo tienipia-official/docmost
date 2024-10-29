@@ -8,9 +8,9 @@ export default function PageWidthPref() {
   return (
     <Group justify="space-between" wrap="nowrap" gap="xl">
       <div>
-        <Text size="md">전체 페이지 너비</Text>
+        <Text size="md">폭 맞춤</Text>
         <Text size="sm" c="dimmed">
-          전체 페이지 너비를 사용하거나 사용하지 않습니다.
+          폭 맞춤으로 사용하거나, 고정 크기를 사용합니다.
         </Text>
       </div>
 
