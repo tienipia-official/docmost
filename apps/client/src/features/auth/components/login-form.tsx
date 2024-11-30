@@ -32,7 +32,7 @@ const email = urlParams.get("email");
 
 export function LoginForm() {
   const { signIn, isLoading } = useAuth();
-  useRedirectIfAuthenticated();
+  useRedirectIfAuthenticated(email);
 
   const form = useForm<ILogin>({
     validate: zodResolver(formSchema),
