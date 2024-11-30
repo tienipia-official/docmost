@@ -191,7 +191,7 @@ export default function SpaceTree({ spaceId, readOnly }: SpaceTreeProps) {
     <div ref={mergedRef} className={classes.treeContainer}>
       {rootElement.current && (
         <Tree
-          data={data}
+          data={data.filter((node) => node?.spaceId === spaceId)}
           disableDrag={readOnly}
           disableDrop={readOnly}
           disableEdit={readOnly}
@@ -279,6 +279,7 @@ function Node({ node, style, dragHandle, tree }: NodeRendererProps<any>) {
     setTimeout(() => {
       emit({
         operation: "updateOne",
+        spaceId: node.data.spaceId,
         entity: ["pages"],
         id: node.id,
         payload: { icon: emoji.native },
@@ -293,6 +294,7 @@ function Node({ node, style, dragHandle, tree }: NodeRendererProps<any>) {
     setTimeout(() => {
       emit({
         operation: "updateOne",
+        spaceId: node.data.spaceId,
         entity: ["pages"],
         id: node.id,
         payload: { icon: null },

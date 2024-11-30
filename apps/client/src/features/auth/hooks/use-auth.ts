@@ -22,6 +22,7 @@ import { IAcceptInvite } from "@/features/workspace/types/workspace.types.ts";
 import { acceptInvitation } from "@/features/workspace/services/workspace-service.ts";
 import { jwtDecode } from "jwt-decode";
 import APP_ROUTE from "@/lib/app-route.ts";
+import { useQueryClient } from "@tanstack/react-query";
 
 export default function useAuth() {
   const [isLoading, setIsLoading] = useState(false);
@@ -29,6 +30,7 @@ export default function useAuth() {
 
   const [, setCurrentUser] = useAtom(currentUserAtom);
   const [authToken, setAuthToken] = useAtom(authTokensAtom);
+  const queryClient = useQueryClient();
 
   const handleSignIn = async (data: ILogin) => {
     setIsLoading(true);
@@ -154,7 +156,8 @@ export default function useAuth() {
     setAuthToken(null);
     setCurrentUser(null);
     localStorage.removeItem("authTokens");
-    navigate(APP_ROUTE.AUTH.LOGIN);
+    queryClient.clear();
+    window.location.replace(APP_ROUTE.AUTH.LOGIN);
   };
 
   const handleForgotPassword = async (data: IForgotPassword) => {
