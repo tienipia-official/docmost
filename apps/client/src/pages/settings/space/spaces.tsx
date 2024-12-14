@@ -12,7 +12,7 @@ export default function Spaces() {
     return (
         <>
             <Helmet>
-                <title>Spaces - {getAppName()}</title>
+                <title>스페이스 - {getAppName()}</title>
             </Helmet>
             <SettingsTitle title="Spaces"/>
 

@@ -53,14 +53,14 @@ export function SpaceSelect({ onChange, label, value }: SpaceSelectProps) {
       renderOption={renderSelectOption}
       maxDropdownHeight={300}
       //label={label || 'Select space'}
-      placeholder="Search for spaces"
+      placeholder="스페이스 선택"
       searchable
       searchValue={searchValue}
       onSearchChange={setSearchValue}
       clearable
       variant="filled"
       onChange={onChange}
-      nothingFoundMessage="No space found"
+      nothingFoundMessage="스페이스를 찾을 수 없습니다."
       limit={50}
       checkIconPosition="right"
       comboboxProps={{ width: 300, withinPortal: false }}

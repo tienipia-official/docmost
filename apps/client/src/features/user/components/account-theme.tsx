@@ -10,9 +10,9 @@ export default function AccountTheme() {
   return (
     <Group justify="space-between" wrap="nowrap" gap="xl">
       <div>
-        <Text size="md">Theme</Text>
+        <Text size="md">테마</Text>
         <Text size="sm" c="dimmed">
-          Choose your preferred color scheme.
+          선호하는 색상 테마를 선택하세요.
         </Text>
       </div>
 
@@ -30,7 +30,7 @@ function ThemeSwitcher() {
 
   return (
     <Select
-      label="Select theme"
+      label="테마 선택"
       data={[
         { value: "light", label: "Light" },
         { value: "dark", label: "Dark" },

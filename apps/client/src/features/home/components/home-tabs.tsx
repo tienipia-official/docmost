@@ -8,7 +8,7 @@ export default function HomeTabs() {
       <Tabs.List>
         <Tabs.Tab value="recent" leftSection={<IconClockHour3 size={18} />}>
           <Text size="sm" fw={500}>
-            Recently updated
+            최근 변경 사항
           </Text>
         </Tabs.Tab>
       </Tabs.List>

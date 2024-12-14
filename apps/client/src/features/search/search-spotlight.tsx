@@ -65,16 +65,18 @@ export function SearchSpotlight({ spaceId }: SearchSpotlightProps) {
         }}
       >
         <Spotlight.Search
-          placeholder="Search..."
+          placeholder="검색"
           leftSection={<IconSearch size={20} stroke={1.5} />}
         />
         <Spotlight.ActionsList>
           {query.length === 0 && pages.length === 0 && (
-            <Spotlight.Empty>Start typing to search...</Spotlight.Empty>
+            <Spotlight.Empty>검색어를 입력해주세요.</Spotlight.Empty>
           )}
 
           {query.length > 0 && pages.length === 0 && (
-            <Spotlight.Empty>No results found...</Spotlight.Empty>
+            <Spotlight.Empty>
+              검색 결과가 없습니다. 다른 검색어를 시도해주세요.
+            </Spotlight.Empty>
           )}
 
           {pages.length > 0 && pages}

@@ -65,8 +65,8 @@ export function EditSpaceForm({ space, readOnly }: EditSpaceFormProps) {
           <Stack>
             <TextInput
               id="name"
-              label="Name"
-              placeholder="e.g Sales"
+              label="스페이스명"
+              placeholder="세일즈팀"
               variant="filled"
               readOnly={readOnly}
               {...form.getInputProps("name")}
@@ -74,7 +74,8 @@ export function EditSpaceForm({ space, readOnly }: EditSpaceFormProps) {
 
             <TextInput
               id="slug"
-              label="Slug"
+              label="식별자"
+              placeholder="my-space"
               variant="filled"
               readOnly={readOnly}
               {...form.getInputProps("slug")}
@@ -82,8 +83,8 @@ export function EditSpaceForm({ space, readOnly }: EditSpaceFormProps) {
 
             <Textarea
               id="description"
-              label="Description"
-              placeholder="e.g Space for sales team to collaborate"
+              label="설명"
+              placeholder="이 스페이스는 판매팀을 위한 공간입니다."
               variant="filled"
               readOnly={readOnly}
               autosize
@@ -96,7 +97,7 @@ export function EditSpaceForm({ space, readOnly }: EditSpaceFormProps) {
           {!readOnly && (
             <Group justify="flex-end" mt="md">
               <Button type="submit" disabled={!form.isDirty()}>
-                Save
+                저장
               </Button>
             </Group>
           )}

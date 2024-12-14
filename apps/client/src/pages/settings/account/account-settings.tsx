@@ -11,9 +11,9 @@ export default function AccountSettings() {
   return (
     <>
         <Helmet>
-            <title>My Profile - {getAppName()}</title>
+            <title>내 프로필  - {getAppName()}</title>
         </Helmet>
-      <SettingsTitle title="My Profile" />
+      <SettingsTitle title="내 프로필 " />
 
       <AccountAvatar />
 

@@ -51,33 +51,33 @@ export default function DeleteSpaceModal({ space }: DeleteSpaceModalProps) {
       <Modal
         opened={opened}
         onClose={close}
-        title="Are you sure you want to delete this space?"
+        title="이 스페이스를 삭제하시겠습니까?"
       >
         <Divider size="xs" mb="xs" />
         <Text>
-          All pages, comments, attachments and permissions in this space will be
-          deleted irreversibly.
+          이 스페이스의 모든 페이지, 댓글, 첨부 파일 및 권한이 영구적으로
+          삭제됩니다. 이 작업은 되돌릴 수 없습니다.
         </Text>
         <Text mt="sm">
-          Type the space name{' '}
+          삭제 하시려면{' '}
           <Text span fw={500}>
             '{space.name}'
           </Text>{' '}
-          to confirm your action.
+          을(를) 입력하세요.
         </Text>
         <TextInput
           {...confirmNameField.getInputProps()}
           variant="filled"
-          placeholder="Confirm space name"
+          placeholder="스페이스 이름 입력"
           py="sm"
           data-autofocus
         />
         <Group justify="flex-end" mt="md">
           <Button onClick={close} variant="default">
-            Cancel
+            취소
           </Button>
           <Button onClick={handleDelete} color="red">
-            Confirm
+            삭제
           </Button>
         </Group>
       </Modal>

@@ -12,9 +12,9 @@ export default function Groups() {
   return (
     <>
         <Helmet>
-            <title>Groups - {getAppName()}</title>
+            <title>그룹 - {getAppName()}</title>
         </Helmet>
-      <SettingsTitle title="Groups" />
+      <SettingsTitle title="그룹" />
 
       <Group my="md" justify="flex-end">
         {isAdmin && <CreateGroupModal />}

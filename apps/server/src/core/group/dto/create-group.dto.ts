@@ -28,6 +28,6 @@ export class CreateGroupDto {
 }
 
 export enum DefaultGroup {
-  EVERYONE = 'Everyone',
-  DESCRIPTION = 'Group for all users in this workspace.',
+  EVERYONE = '기본그룹',
+  DESCRIPTION = '이 워크스페이스의 모든 구성원이 속한 그룹입니다.',
 }

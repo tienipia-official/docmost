@@ -40,7 +40,7 @@ export function MultiGroupSelect({
   useEffect(() => {
     if (groups) {
       const groupsData = groups?.items
-        .filter((group: IGroup) => group.name.toLowerCase() !== 'everyone')
+        .filter((group: IGroup) => group.name.toLowerCase() !== "기본그룹")
         .map((group: IGroup) => {
           return {
             value: group.id,
@@ -67,7 +67,7 @@ export function MultiGroupSelect({
       maxDropdownHeight={300}
       description={description}
       label={label || "Add groups"}
-      placeholder="Search for groups"
+      placeholder="그룹을 검색하세요"
       mt={mt}
       searchable
       searchValue={searchValue}
@@ -75,7 +75,7 @@ export function MultiGroupSelect({
       clearable
       variant="filled"
       onChange={onChange}
-      nothingFoundMessage="No group found"
+      nothingFoundMessage="그룹을 찾을 수 없습니다."
       maxValues={50}
     />
   );

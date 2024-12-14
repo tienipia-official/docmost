@@ -48,8 +48,8 @@ export default function AddSpaceMembersModal({
 
   return (
     <>
-      <Button onClick={open}>Add space members</Button>
-      <Modal opened={opened} onClose={close} title="Add space members">
+      <Button onClick={open}>구성원 추가</Button>
+      <Modal opened={opened} onClose={close} title="스페이스 구성원 추가">
         <Divider size="xs" mb="xs" />
 
         <Stack>
@@ -57,13 +57,13 @@ export default function AddSpaceMembersModal({
           <SpaceMemberRole
             onSelect={handleRoleSelection}
             defaultRole={role}
-            label="Select role"
+            label="역할 선택"
           />
         </Stack>
 
         <Group justify="flex-end" mt="md">
           <Button onClick={handleSubmit} type="submit">
-            Add
+            추가
           </Button>
         </Group>
       </Modal>

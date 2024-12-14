@@ -20,7 +20,7 @@ export default function SpaceDetails({ spaceId, readOnly }: SpaceDetailsProps) {
       {space && (
         <div>
           <Text my="md" fw={600}>
-            Details
+            세부정보
           </Text>
           <EditSpaceForm space={space} readOnly={readOnly} />
 
@@ -38,7 +38,7 @@ export default function SpaceDetails({ spaceId, readOnly }: SpaceDetailsProps) {
                 </div>
 
                 <Button onClick={openExportModal}>
-                  Export
+                  내보내기
                 </Button>
               </Group>
 
@@ -46,9 +46,9 @@ export default function SpaceDetails({ spaceId, readOnly }: SpaceDetailsProps) {
 
               <Group justify="space-between" wrap="nowrap" gap="xl">
                 <div>
-                  <Text size="md">Delete space</Text>
+                  <Text size="md">스페이스 삭제</Text>
                   <Text size="sm" c="dimmed">
-                    Delete this space with all its pages and data.
+                    이 스페이스와 모든 페이지 및 데이터를 삭제합니다.
                   </Text>
                 </div>
 

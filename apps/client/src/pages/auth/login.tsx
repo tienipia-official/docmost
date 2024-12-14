@@ -6,7 +6,7 @@ export default function LoginPage() {
   return (
     <>
       <Helmet>
-        <title>Login - {getAppName()}</title>
+        <title>로그인 - {getAppName()}</title>
       </Helmet>
       <LoginForm />
     </>
