@@ -78,7 +78,7 @@ export default function RecentChanges({spaceId}: Props) {
     </Table.ScrollContainer>
   ) : (
     <Text size="md" ta="center">
-      No pages yet
+      작성된 페이지가 없습니다.
     </Text>
   );
 }

@@ -50,10 +50,10 @@ export default function SpaceSettingsModal({
               <Tabs defaultValue="members">
                 <Tabs.List>
                   <Tabs.Tab fw={500} value="general">
-                    Settings
+                    설정
                   </Tabs.Tab>
                   <Tabs.Tab fw={500} value="members">
-                    Members
+                    구성원
                   </Tabs.Tab>
                 </Tabs.List>
 

@@ -44,9 +44,9 @@ export function WorkspaceInviteForm({ onClose }: Props) {
 
         <TagsInput
           mt="sm"
-          description="Enter valid email addresses separated by comma or space [max: 50]"
-          label="Invite by email"
-          placeholder="enter valid emails addresses"
+          description="새로운 구성원을 초대할 이메일 주소를 입력하세요. (최대 50개, 쉼표로 구분)"
+          label="이메일로 초대"
+          placeholder="이메일 주소를 입력하세요"
           variant="filled"
           splitChars={[",", " "]}
           maxDropdownHeight={200}
@@ -56,9 +56,9 @@ export function WorkspaceInviteForm({ onClose }: Props) {
 
         <Select
           mt="sm"
-          description="Select role to assign to all invited members"
-          label="Select role"
-          placeholder="Choose a role"
+          description="초대된 구성원에게 할당할 역할을 선택"
+          label="역할 선택"
+          placeholder="역할 선택"
           variant="filled"
           data={userRoleData.filter((role) => role.value !== UserRole.OWNER)}
           defaultValue={UserRole.MEMBER}
@@ -69,8 +69,8 @@ export function WorkspaceInviteForm({ onClose }: Props) {
 
         <MultiGroupSelect
           mt="sm"
-          description="Invited members will be granted access to spaces the groups can access"
-          label={"Add to groups"}
+          description="초대된 구성원은 그룹이 접근할 수 있는 공간에 액세스 권한이 부여됩니다."
+          label={"그룹에 추가"}
           onChange={handleGroupSelect}
         />
 
@@ -79,7 +79,7 @@ export function WorkspaceInviteForm({ onClose }: Props) {
             onClick={handleSubmit}
             loading={createInvitationMutation.isPending}
           >
-            Send invitation
+            초대 보내기
           </Button>
         </Group>
       </Box>

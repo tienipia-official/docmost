@@ -12,7 +12,7 @@ import {
 import {useToggleSidebar} from "@/components/layouts/global/hooks/hooks/use-toggle-sidebar.ts";
 import SidebarToggle from "@/components/ui/sidebar-toggle-button.tsx";
 
-const links = [{link: APP_ROUTE.HOME, label: "Home"}];
+const links = [{link: APP_ROUTE.HOME, label: "워크스페이스 홈"}];
 
 export function AppHeader() {
   const [mobileOpened] = useAtom(mobileSidebarAtom);
@@ -58,17 +58,7 @@ export function AppHeader() {
             </>
           )}
 
-          <Text
-            size="lg"
-            fw={600}
-            style={{cursor: "pointer", userSelect: "none"}}
-            component={Link}
-            to="/home"
-          >
-            Docmost
-          </Text>
-
-          <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
+          <Group gap={5} className={classes.links} visibleFrom="sm">
             {items}
           </Group>
         </Group>

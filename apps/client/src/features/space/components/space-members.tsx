@@ -79,11 +79,11 @@ export default function SpaceMembersList({
 
   const openRemoveModal = (memberId: string, type: MemberType) =>
     modals.openConfirmModal({
-      title: "Remove space member",
+      title: "스페이스 구성원 삭제",
       children: (
         <Text size="sm">
-          Are you sure you want to remove this user from the space? The user
-          will lose all access to this space.
+          이 사용자를 스페이스에서 삭제하시겠습니까? 사용자는 이 스페이스의 모든
+          접근 권한을 잃게 됩니다.
         </Text>
       ),
       centered: true,
@@ -171,7 +171,7 @@ export default function SpaceMembersList({
                               openRemoveModal(member.id, member.type)
                             }
                           >
-                            Remove space member
+                            스페이스 구성원 삭제
                           </Menu.Item>
                         </Menu.Dropdown>
                       </Menu>

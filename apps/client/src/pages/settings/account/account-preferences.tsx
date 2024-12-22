@@ -9,9 +9,9 @@ export default function AccountPreferences() {
     return (
         <>
             <Helmet>
-                <title>Preferences - {getAppName()}</title>
+                <title>환경설정 - {getAppName()}</title>
             </Helmet>
-            <SettingsTitle title="Preferences"/>
+            <SettingsTitle title="환경설정"/>
             <AccountTheme/>
             <Divider my={"md"}/>
             <PageWidthPref/>

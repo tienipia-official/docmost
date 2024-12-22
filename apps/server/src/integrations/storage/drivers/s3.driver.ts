@@ -30,6 +30,7 @@ export class S3Driver implements StorageDriver {
         Key: filePath,
         Body: file,
         ContentType: contentType,
+        StorageClass: 'INTELLIGENT_TIERING',
         // ACL: "public-read",
       });
 

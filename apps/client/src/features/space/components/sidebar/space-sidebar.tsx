@@ -89,7 +89,7 @@ export function SpaceSidebar() {
                   className={classes.menuItemIcon}
                   stroke={2}
                 />
-                <span>Overview</span>
+                <span>스페이스</span>
               </div>
             </UnstyledButton>
 
@@ -100,7 +100,7 @@ export function SpaceSidebar() {
                   className={classes.menuItemIcon}
                   stroke={2}
                 />
-                <span>Search</span>
+                <span>검색</span>
               </div>
             </UnstyledButton>
 
@@ -111,7 +111,7 @@ export function SpaceSidebar() {
                   className={classes.menuItemIcon}
                   stroke={2}
                 />
-                <span>Space settings</span>
+                <span>설정</span>
               </div>
             </UnstyledButton>
 
@@ -129,7 +129,7 @@ export function SpaceSidebar() {
                     className={classes.menuItemIcon}
                     stroke={2}
                   />
-                  <span>New page</span>
+                  <span>새 페이지</span>
                 </div>
               </UnstyledButton>
             )}
@@ -139,7 +139,7 @@ export function SpaceSidebar() {
         <div className={clsx(classes.section, classes.sectionPages)}>
           <Group className={classes.pagesHeader} justify="space-between">
             <Text size="xs" fw={500} c="dimmed">
-              Pages
+              페이지
             </Text>
 
             {spaceAbility.can(
@@ -149,12 +149,12 @@ export function SpaceSidebar() {
               <Group gap="xs">
                 <SpaceMenu spaceId={space.id} onSpaceSettings={openSettings} />
 
-                <Tooltip label="Create page" withArrow position="right">
+                <Tooltip label="새 페이지" withArrow position="right">
                   <ActionIcon
                     variant="default"
                     size={18}
                     onClick={handleCreatePage}
-                    aria-label="Create page"
+                    aria-label="새 페이지"
                   >
                     <IconPlus />
                   </ActionIcon>
@@ -201,7 +201,7 @@ function SpaceMenu({ spaceId, onSpaceSettings }: SpaceMenuProps) {
       <Menu width={200} shadow="md" withArrow>
         <Menu.Target>
           <Tooltip
-            label="Import pages & space settings"
+            label="불러오기 & 스페이스 설정"
             withArrow
             position="top"
           >
@@ -216,7 +216,7 @@ function SpaceMenu({ spaceId, onSpaceSettings }: SpaceMenuProps) {
             onClick={openImportModal}
             leftSection={<IconArrowDown size={16} />}
           >
-            Import pages
+            외부 자료 불러오기
           </Menu.Item>
 
           <Menu.Item
@@ -232,7 +232,7 @@ function SpaceMenu({ spaceId, onSpaceSettings }: SpaceMenuProps) {
             onClick={onSpaceSettings}
             leftSection={<IconSettings size={16} />}
           >
-            Space settings
+            설정
           </Menu.Item>
         </Menu.Dropdown>
       </Menu>

@@ -55,7 +55,7 @@ export default function WorkspaceNameForm() {
     <form onSubmit={form.onSubmit(handleSubmit)}>
       <TextInput
         id="name"
-        label="Name"
+        label="워크스페이스 명"
         placeholder="e.g ACME"
         variant="filled"
         readOnly={!isAdmin}
@@ -69,7 +69,7 @@ export default function WorkspaceNameForm() {
           disabled={isLoading || !form.isDirty()}
           loading={isLoading}
         >
-          Save
+          저장
         </Button>
       )}
     </form>

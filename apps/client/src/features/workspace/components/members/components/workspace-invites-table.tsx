@@ -16,7 +16,7 @@ export default function WorkspaceInvitesTable() {
   return (
     <>
       <Alert variant="light" color="blue" icon={<IconInfoCircle/>}>
-        Invited members who are yet to accept their invitation will appear here.
+        초대된 구성원 중 초대를 수락하지 않은 구성원이 여기에 표시됩니다.
       </Alert>
 
       {data && (

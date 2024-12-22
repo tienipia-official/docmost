@@ -8,9 +8,9 @@ export default function PageWidthPref() {
   return (
     <Group justify="space-between" wrap="nowrap" gap="xl">
       <div>
-        <Text size="md">Full page width</Text>
+        <Text size="md">폭 맞춤</Text>
         <Text size="sm" c="dimmed">
-          Choose your preferred page width.
+          폭 맞춤으로 사용하거나, 고정 크기를 사용합니다.
         </Text>
       </div>
 
