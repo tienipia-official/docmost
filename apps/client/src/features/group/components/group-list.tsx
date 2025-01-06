@@ -3,6 +3,7 @@ import {useGetGroupsQuery} from "@/features/group/queries/group-query";
 import React from "react";
 import {Link} from "react-router-dom";
 import {IconGroupCircle} from "@/components/icons/icon-people-circle.tsx";
+import {formatMemberCount} from "@/lib";
 
 export default function GroupList() {
   const {data, isLoading} = useGetGroupsQuery();
@@ -14,8 +15,8 @@ export default function GroupList() {
           <Table highlightOnHover verticalSpacing="sm">
             <Table.Thead>
               <Table.Tr>
-                <Table.Th>Group</Table.Th>
-                <Table.Th>Members</Table.Th>
+                <Table.Th>그룹</Table.Th>
+                <Table.Th>구성원</Table.Th>
               </Table.Tr>
             </Table.Thead>
 
@@ -59,7 +60,7 @@ export default function GroupList() {
                       component={Link}
                       to={`/settings/groups/${group.id}`}
                     >
-                      {group.memberCount} members
+                      {formatMemberCount(group.memberCount)}
                     </Anchor>
                   </Table.Td>
                 </Table.Tr>

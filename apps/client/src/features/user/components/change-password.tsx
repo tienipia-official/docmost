@@ -13,15 +13,15 @@ export default function ChangePassword() {
   return (
     <Group justify="space-between" wrap="nowrap" gap="xl">
       <div>
-        <Text size="md">Password</Text>
+        <Text size="md">비밀번호</Text>
         <Text size="sm" c="dimmed">
-          You can change your password here.
+          그룹웨어에서 비밀번호 변경이 가능합니다.
         </Text>
       </div>
 
-      <Button onClick={open} variant="default">
+      {/* <Button onClick={open} variant="default">
         Change password
-      </Button>
+      </Button> */}
 
       <Modal opened={opened} onClose={close} title="Change password" centered>
         <Text mb="md">Your password must be a minimum of 8 characters.</Text>

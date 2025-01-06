@@ -68,7 +68,7 @@ export default function WorkspaceMembersTable() {
                   </Table.Td>
 
                   <Table.Td>
-                    <Badge variant="light">Active</Badge>
+                    <Badge variant="light">활성</Badge>
                   </Table.Td>
 
                   <Table.Td>

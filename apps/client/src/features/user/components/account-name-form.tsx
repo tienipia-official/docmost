@@ -53,14 +53,15 @@ export default function AccountNameForm() {
     <form onSubmit={form.onSubmit(handleSubmit)}>
       <TextInput
         id="name"
-        label="Name"
-        placeholder="Your name"
+        label="이름"
+        placeholder="이름을 입력해주세요"
         variant="filled"
+        disabled
         {...form.getInputProps("name")}
       />
-      <Button type="submit" mt="sm" disabled={isLoading} loading={isLoading}>
-        Save
-      </Button>
+      {/* <Button type="submit" mt="sm" disabled={isLoading} loading={isLoading}>
+        저장
+      </Button> */}
     </form>
   );
 }

@@ -74,8 +74,8 @@ export function CreateSpaceForm() {
             <TextInput
               withAsterisk
               id="name"
-              label="Space name"
-              placeholder="e.g Product Team"
+              label="스페이스 이름"
+              placeholder="예시) 제품팀"
               variant="filled"
               {...form.getInputProps("name")}
             />
@@ -83,16 +83,16 @@ export function CreateSpaceForm() {
             <TextInput
               withAsterisk
               id="slug"
-              label="Space slug"
-              placeholder="e.g product"
+              label="스페이스 슬러그(Slug)"
+              placeholder="예시) product"
               variant="filled"
               {...form.getInputProps("slug")}
             />
 
             <Textarea
               id="description"
-              label="Space description"
-              placeholder="e.g Space for product team"
+              label="스페이스 설명"
+              placeholder="예시) 제품 관련 작업을 위한 스페이스입니다."
               variant="filled"
               autosize
               minRows={2}
@@ -102,7 +102,7 @@ export function CreateSpaceForm() {
           </Stack>
 
           <Group justify="flex-end" mt="md">
-            <Button type="submit">Create</Button>
+            <Button type="submit">생성</Button>
           </Group>
         </form>
       </Box>

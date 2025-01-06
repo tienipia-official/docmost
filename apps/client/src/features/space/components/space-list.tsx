@@ -22,8 +22,8 @@ export default function SpaceList() {
           <Table highlightOnHover verticalSpacing="sm">
             <Table.Thead>
               <Table.Tr>
-                <Table.Th>Space</Table.Th>
-                <Table.Th>Members</Table.Th>
+                <Table.Th>스페이스</Table.Th>
+                <Table.Th>구성원</Table.Th>
               </Table.Tr>
             </Table.Thead>
 

@@ -7,9 +7,9 @@ export default function CreateSpaceModal() {
 
   return (
     <>
-      <Button onClick={open}>Create space</Button>
+      <Button onClick={open}>스페이스 생성</Button>
 
-      <Modal opened={opened} onClose={close} title="Create space">
+      <Modal opened={opened} onClose={close} title="스페이스 생성">
         <Divider size="xs" mb="xs" />
         <CreateSpaceForm />
       </Modal>

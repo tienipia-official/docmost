@@ -14,7 +14,7 @@ export default function Spaces() {
             <Helmet>
                 <title>스페이스 - {getAppName()}</title>
             </Helmet>
-            <SettingsTitle title="Spaces"/>
+            <SettingsTitle title="스페이스"/>
 
             <Group my="md" justify="flex-end">
                 {isAdmin && <CreateSpaceModal/>}

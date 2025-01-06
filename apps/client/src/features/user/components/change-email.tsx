@@ -21,7 +21,7 @@ export default function ChangeEmail() {
   return (
     <Group justify="space-between" wrap="nowrap" gap="xl">
       <div>
-        <Text size="md">Email</Text>
+        <Text size="md">이메일</Text>
         <Text size="sm" c="dimmed">
           {currentUser?.user.email}
         </Text>

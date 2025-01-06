@@ -25,9 +25,9 @@ export default function WorkspaceInvitesTable() {
             <Table verticalSpacing="sm">
               <Table.Thead>
                 <Table.Tr>
-                  <Table.Th>Email</Table.Th>
-                  <Table.Th>Role</Table.Th>
-                  <Table.Th>Date</Table.Th>
+                  <Table.Th>이메일</Table.Th>
+                  <Table.Th>권한</Table.Th>
+                  <Table.Th>날짜</Table.Th>
                 </Table.Tr>
               </Table.Thead>
 

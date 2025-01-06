@@ -8,9 +8,9 @@ export default function GroupInfo() {
     return (
         <>
             <Helmet>
-                <title>Manage Group - {getAppName()}</title>
+                <title>그룹 관리 - {getAppName()}</title>
             </Helmet>
-            <SettingsTitle title="Manage Group"/>
+            <SettingsTitle title="그룹 관리"/>
             <GroupDetails/>
             <GroupMembersList/>
         </>
