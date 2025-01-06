@@ -17,7 +17,7 @@ export class PaginationOptions {
   @IsNumber()
   @IsPositive()
   @Min(1)
-  @Max(100)
+  @Max(99999)
   limit = 20;
 
   @IsOptional()

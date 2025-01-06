@@ -14,7 +14,7 @@ import useUserRole from "@/hooks/use-user-role.tsx";
 import {UserRole} from "@/lib/types.ts";
 
 export default function WorkspaceMembersTable() {
-  const {data, isLoading} = useWorkspaceMembersQuery({limit: 100});
+  const {data, isLoading} = useWorkspaceMembersQuery({limit: 9999});
   const changeMemberRoleMutation = useChangeMemberRoleMutation();
   const {isAdmin, isOwner} = useUserRole();
 
@@ -44,9 +44,9 @@ export default function WorkspaceMembersTable() {
           <Table verticalSpacing="sm">
             <Table.Thead>
               <Table.Tr>
-                <Table.Th>User</Table.Th>
-                <Table.Th>Status</Table.Th>
-                <Table.Th>Role</Table.Th>
+                <Table.Th>구성원</Table.Th>
+                <Table.Th>상태</Table.Th>
+                <Table.Th>권한</Table.Th>
               </Table.Tr>
             </Table.Thead>
 
