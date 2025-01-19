@@ -99,7 +99,7 @@ export default function SpaceMembersList({
   return (
     <>
       {data && (
-        <Table.ScrollContainer minWidth={500}>
+        <Table.ScrollContainer minWidth={500} style={{ height: 500 }}>
           <Table verticalSpacing={8}>
             <Table.Thead>
               <Table.Tr>

@@ -42,7 +42,7 @@ export function MultiGroupSelect({
   useEffect(() => {
     if (groups) {
       const groupsData = groups?.items
-        .filter((group: IGroup) => group.name.toLowerCase() !== 'everyone')
+        .filter((group: IGroup) => group.name.toLowerCase() !== "기본그룹")
         .map((group: IGroup) => {
           return {
             value: group.id,

@@ -55,6 +55,52 @@ export const LinkExtension = TiptapLink.extend({
       ...(this.parent?.() || []),
       new Plugin({
         props: {
+          handlePaste: (view: EditorView, event: ClipboardEvent) => {
+            const clipboardData = event.clipboardData;
+            const pastedUrl = clipboardData?.getData("text/plain");
+
+            if (window.parent) {
+              window.parent.postMessage({ type: "pasted" }, "*");
+            }
+
+            if (
+              pastedUrl &&
+              (pastedUrl.includes("fileName=") ||
+                pastedUrl.includes("folderName="))
+            ) {
+              event.preventDefault();
+
+              // Extract the fileName query string value from the URL
+              const url = new URL(pastedUrl);
+              const fileName = url.searchParams.get("fileName");
+              const folderName = url.searchParams.get("folderName");
+
+              let displayText = pastedUrl;
+
+              if (fileName) {
+                displayText = "📄 " + fileName;
+              } else if (folderName) {
+                displayText = "📁 " + folderName;
+              }
+
+              // Insert the link as a file name text
+              editor
+                .chain()
+                .focus()
+                // .extendMarkRange("link")
+                .setLink({ href: pastedUrl })
+                .command(({ tr }) => {
+                  tr.insertText(displayText);
+                  return true;
+                })
+                .run();
+
+              return true;
+            }
+
+            return false;
+          },
+
           handleKeyDown: (view: EditorView, event: KeyboardEvent) => {
             const { selection } = editor.state;
 

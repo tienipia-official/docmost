@@ -58,6 +58,7 @@ export default function AccountNameForm() {
         label={t("Name")}
         placeholder={t("Your name")}
         variant="filled"
+        disabled
         {...form.getInputProps("name")}
       />
       <Button type="submit" mt="sm" disabled={isLoading} loading={isLoading}>

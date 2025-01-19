@@ -249,7 +249,7 @@ export class WorkspaceInvitationService {
 
       await this.mailService.sendToQueue({
         to: invitedByUser.email,
-        subject: `${newUser.name} has accepted your Docmost invite`,
+        subject: `${newUser.name}가 워크스페이스 초대를 수락했습니다`,
         template: emailTemplate,
       });
     }
@@ -312,7 +312,7 @@ export class WorkspaceInvitationService {
 
     await this.mailService.sendToQueue({
       to: inviteeEmail,
-      subject: `${invitedByName} invited you to Docmost`,
+      subject: `${invitedByName}가 워크스페이스에 초대했습니다`,
       template: emailTemplate,
     });
   }
