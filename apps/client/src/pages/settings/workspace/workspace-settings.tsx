@@ -9,7 +9,7 @@ export default function WorkspaceSettings() {
     return (
         <>
             <Helmet>
-                <title>Workspace Settings - {getAppName()}</title>
+                <title>워크스페이스 설정 - {getAppName()}</title>
             </Helmet>
             <SettingsTitle title={t("General")} />
             <WorkspaceNameForm/>

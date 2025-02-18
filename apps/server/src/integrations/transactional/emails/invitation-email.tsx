@@ -11,10 +11,12 @@ export const InvitationEmail = ({ inviteLink }: Props) => {
   return (
     <MailBody>
       <Section style={content}>
-        <Text style={paragraph}>Hi there,</Text>
-        <Text style={paragraph}>You have been invited to Docmost.</Text>
+        <Text style={paragraph}>안녕하세요.</Text>
         <Text style={paragraph}>
-          Please click the button below to accept this invitation.
+          귀하는 워크스페이스 멤버로 초대 되었습니다.
+        </Text>
+        <Text style={paragraph}>
+          아래 수락 버튼을 클릭하여 초대를 수락하고 워크스페이스에 참여하세요.
         </Text>
       </Section>
       <Section
@@ -27,7 +29,7 @@ export const InvitationEmail = ({ inviteLink }: Props) => {
         }}
       >
         <Button href={inviteLink} style={button}>
-          Accept Invite
+          수락하기
         </Button>
       </Section>
     </MailBody>
