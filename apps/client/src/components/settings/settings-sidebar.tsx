@@ -26,27 +26,27 @@ interface DataGroup {
 
 const groupedData: DataGroup[] = [
   {
-    heading: "Account",
+    heading: "계정",
     items: [
-      { label: "Profile", icon: IconUser, path: "/settings/account/profile" },
+      { label: "프로필", icon: IconUser, path: "/settings/account/profile" },
       {
-        label: "Preferences",
+        label: "환경설정",
         icon: IconBrush,
         path: "/settings/account/preferences",
       },
     ],
   },
   {
-    heading: "Workspace",
+    heading: "워크스페이스",
     items: [
-      { label: "General", icon: IconSettings, path: "/settings/workspace" },
+      { label: "일반", icon: IconSettings, path: "/settings/workspace" },
       {
-        label: "Members",
+        label: "구성원",
         icon: IconUsers,
         path: "/settings/members",
       },
-      { label: "Groups", icon: IconUsersGroup, path: "/settings/groups" },
-      { label: "Spaces", icon: IconSpaces, path: "/settings/spaces" },
+      { label: "그룹", icon: IconUsersGroup, path: "/settings/groups" },
+      { label: "스페이스", icon: IconSpaces, path: "/settings/spaces" },
     ],
   },
 ];

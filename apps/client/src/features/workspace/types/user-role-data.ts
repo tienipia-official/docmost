@@ -2,19 +2,19 @@ import { IRoleData, UserRole } from "@/lib/types.ts";
 
 export const userRoleData: IRoleData[] = [
   {
-    label: "Owner",
+    label: "소유자",
     value: UserRole.OWNER,
-    description: "Can manage workspace",
+    description: "워크스페이스 소유자",
   },
   {
-    label: "Admin",
+    label: "관리자",
     value: UserRole.ADMIN,
-    description: "Can manage workspace but cannot delete it",
+    description: "워크스페이스를 관리할 수 있습니다.",
   },
   {
-    label: "Member",
+    label: "구성원",
     value: UserRole.MEMBER,
-    description: "Can become members of groups and spaces in workspace",
+    description: "워크스페이스 구성원",
   },
 ];
 
