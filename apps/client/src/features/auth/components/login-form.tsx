@@ -25,6 +25,10 @@ const formSchema = z.object({
   password: z.string().min(1, { message: "Password is required" }),
 });
 
+// parse querystring of url
+const urlParams = new URLSearchParams(window.location.search);
+const email = urlParams.get("email");
+
 export function LoginForm() {
   const { t } = useTranslation();
   const { signIn, isLoading } = useAuth();
@@ -33,7 +37,7 @@ export function LoginForm() {
   const form = useForm<ILogin>({
     validate: zodResolver(formSchema),
     initialValues: {
-      email: "",
+      email: email ?? "",
       password: "",
     },
   });
