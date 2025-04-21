@@ -142,12 +142,12 @@ export class AttachmentController {
         }
     }
 
-    @UseGuards(JwtAuthGuard)
+    // @UseGuards(JwtAuthGuard)
     @Get('/files/:fileId/:fileName')
     async getFile(
         @Res() res: FastifyReply,
-        @AuthUser() user: User,
-        @AuthWorkspace() workspace: Workspace,
+        // @AuthUser() user: User,
+        // @AuthWorkspace() workspace: Workspace,
         @Param('fileId') fileId: string,
         @Param('fileName') fileName?: string,
     ) {
@@ -158,21 +158,21 @@ export class AttachmentController {
         const attachment = await this.attachmentRepo.findById(fileId);
         if (
             !attachment ||
-            attachment.workspaceId !== workspace.id ||
+            // attachment.workspaceId !== workspace.id ||
             !attachment.pageId ||
             !attachment.spaceId
         ) {
             throw new NotFoundException();
         }
 
-        const spaceAbility = await this.spaceAbility.createForUser(
-            user,
-            attachment.spaceId,
-        );
+        // const spaceAbility = await this.spaceAbility.createForUser(
+        //     user,
+        //     attachment.spaceId,
+        // );
 
-        if (spaceAbility.cannot(SpaceCaslAction.Read, SpaceCaslSubject.Page)) {
-            throw new ForbiddenException();
-        }
+        // if (spaceAbility.cannot(SpaceCaslAction.Read, SpaceCaslSubject.Page)) {
+        //     throw new ForbiddenException();
+        // }
 
         try {
             const fileStream = await this.storageService.read(attachment.filePath);
